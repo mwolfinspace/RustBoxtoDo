@@ -1,6 +1,7 @@
 fn main() {
     let number = 3;
 
+    //Cấu trúc nếu thì (if... else...)
     if number < 5 {
         println!("condition was true");
     } else {
@@ -24,6 +25,7 @@ fn main() {
     a_rev_for();
 }
 
+//Hàm vòng lặp có bộ đếm kết hợp if... else...
 fn a_loop() {
     let mut counter = 0;
 
@@ -38,6 +40,7 @@ fn a_loop() {
     println!("The result is {}", result);
 }
 
+//Hàm vòng lặp while theo điều kiện cho trước
 fn a_while() {
     let mut number = 3;
 
@@ -50,6 +53,7 @@ fn a_while() {
     println!("LIFTOFF!!!");
 }
 
+//Hàm vòng lặp while đọc mảng có sẵn
 fn a_while_with_array() {
     let a = [10, 20, 30, 40, 50];
     let mut index = 0;
@@ -61,6 +65,7 @@ fn a_while_with_array() {
     }
 }
 
+//Hàm vòng lặp for đọc mảng có sẵn
 fn a_for() {
     let a = [10, 20, 30, 40, 50];
 
@@ -69,6 +74,7 @@ fn a_for() {
     }
 }
 
+//Hàm vòng lặp for đọc mảng có sẵn theo trình tự ngược lại
 fn a_rev_for() {
     for number in (1..4).rev() {
         println!("{}!", number);
