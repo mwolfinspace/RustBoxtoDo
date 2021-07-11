@@ -1,0 +1,1 @@
+/Users/mwolf/Documents/GitHub/RustBoxtoDo/B1_Basic_Caculation_2_Numbers/target/x86_64-pc-windows-gnu/release/b1_basic_caculation_2_numbers.exe: /Users/mwolf/Documents/GitHub/RustBoxtoDo/B1_Basic_Caculation_2_Numbers/src/main.rs

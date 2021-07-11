@@ -1,5 +1,5 @@
+#![windows_subsystem = "console"]
 use std::io;
-
 fn main(){
     println!("Tính toán hai số cơ bản!");
     let num1 = input_number_loop();
@@ -9,9 +9,13 @@ fn main(){
     multiply(num1,num2);
     division(num1,num2);
 
+    println!("Press enter to exit");
+
+    let mut buffer = String::new();
+    io::stdin().read_line(&mut buffer).ok(); // ignore the result
 }
 
-fn input_number_loop() -> f32{
+fn input_number_loop() -> f64{
     println!("Vui lòng nhập số:");
     loop {
 
@@ -21,7 +25,7 @@ fn input_number_loop() -> f32{
             .read_line(&mut input)
             .expect("Failed to read line");
 
-        let _check_input:f32 = match input.trim().parse() {
+        let _check_input:f64 = match input.trim().parse() {
             Ok(number) => {
                 println!("Số bạn đã nhập là: {}", number);
                 return number;
@@ -35,32 +39,32 @@ fn input_number_loop() -> f32{
     }
 }
 
-// fn input_number() -> f32{
+// fn input_number() -> f64{
 //     println!("Vui lòng nhập số:");
 //     let mut input = String::new();
 //     io::stdin()
 //         .read_line(&mut input)
 //         .expect("Fail to read the line");
-//     let number: f32 = input.trim().parse().expect("Please type a number!");
+//     let number: f64 = input.trim().parse().expect("Please type a number!");
 //     println!("Bạn đã nhập: {}", number);
 //     return number
 // }
 
 
 
-fn add(a: f32, b: f32){
+fn add(a: f64, b: f64){
     println!("Tổng {} + {} là: {}", a, b, a + b);
 }
 
-fn subtract(a: f32, b: f32){
+fn subtract(a: f64, b: f64){
     println!("Hiệu {} - {} là: {}", a, b, a - b);
 }
 
-fn multiply(a: f32, b: f32){
+fn multiply(a: f64, b: f64){
     println!("Tích {} x {} là: {}", a, b, a * b);
 }
 
-fn division(x: f32, y: f32){
+fn division(x: f64, y: f64){
     if y==0.0{
         println!("Phép chia cho 0! Dẹp khỏi tính!");
     } else {
